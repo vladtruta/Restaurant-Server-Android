@@ -7,8 +7,8 @@ object MockData {
     val categories = listOf(
         Category.STARTERS,
         Category.MAIN_COURSES,
-        Category.DESSERTS,
-        Category.BEVERAGES
+        Category.BEVERAGES,
+        Category.DESSERTS
     )
 
     val menuCourses = listOf(
@@ -111,6 +111,142 @@ object MockData {
             "https://www.thespruceeats.com/thmb/cDQK02EZOGbvxzBzV_u7-2-woTk=/4494x3000/filters:fill(auto,1)/virgin-pina-colada-recipe-2097115_05-5b0d8124ff1b7800364356ae.jpg",
             "550 ml",
             25
+        ),
+        MenuCourse(
+            Category.STARTERS,
+            "Devilled eggs",
+            "Hard-boiled chicken eggs that have been shelled, cut in half, and filled with a paste made from the egg yolks mixed with other ingredients such as mayonnaise, chives and a little dijon mustard",
+            "https://www.simplyrecipes.com/wp-content/uploads/2018/06/Kimchi-Deviled-Eggs-LEAD-HORIZONTAL.jpg",
+            "200 g",
+            20
+        ),
+        MenuCourse(
+            Category.STARTERS,
+            "Bruschetta",
+            "Fried sour dough bread slices with cream cheese, salmon and zucchini ",
+            "https://www.ricettedalmondo.it/images/foto-ricette/b/32230-bruschette-con-zucchine-e-salmone.jpg",
+            "150 g",
+            18
+        ),
+        MenuCourse(
+            Category.STARTERS,
+            "Foccacia",
+            "Focaccia is a flat oven-baked Italian bread product similar in style and texture to pizza dough.",
+            "https://littlerock.com.mt/wp-content/uploads/2015/03/Yeastless-potato-and-rosemary-foccacia.jpg",
+            "300 g",
+            15
+        ),
+        MenuCourse(
+            Category.STARTERS,
+            "Tapas",
+            "Charcuterie board containing various Spanish specialities",
+            "https://i2.wp.com/www.spainonafork.com/wp-content/uploads/2020/01/tapas1-33.png?resize=531%2C800&ssl=1",
+            "600 g",
+            60
+        ),
+        MenuCourse(
+            Category.STARTERS,
+            "Tempura fried vegetables",
+            "Vegetables fried in Japanese style batter",
+            "https://kimchimari.com/wp-content/uploads/2011/04/Tempura-Vegetables-Twigim.jpg",
+            "150 g",
+            15
+        ),
+        MenuCourse(
+            Category.STARTERS,
+            "Mozzarella sticks",
+            "Fried mozzarella",
+            "https://romaspecialtypizzas.com/wp-content/uploads/2019/04/mozzarella-sticks.jpg",
+            "250 g",
+            20
+        ),
+        MenuCourse(
+            Category.MAIN_COURSES,
+            "Enchiladas Rojas",
+            "Two red corn tortillas filled with your choice of beef or chicken fajitas rolled and topped with red enchilada gravy and cheese.",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjQODSGMLtAzUMOk9y0kqtIGQFYMarTw3ZAQh41QWaGXrufNJl&usqp=CAU",
+            "400 g",
+            30
+        ),
+        MenuCourse(
+            Category.MAIN_COURSES,
+            "Ramen Chow Mein",
+            "A stir-fry egg noodle dish packed with fresh vegetables served with chicken or beef, tofu, prawn.",
+            "https://hips.hearstapps.com/hmg-prod/images/190208-delish-ramen-horizontal-093-1550096715.jpg",
+            "150 g",
+            15
+        ),
+        MenuCourse(
+            Category.MAIN_COURSES,
+            "Sushi Menu",
+            "Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, vegetables, and occasionally tropical fruits.",
+            "https://sushicluj.ro/wp-content/uploads/2019/01/sm_sushi_set-800x533-300x169.jpg",
+            "250 g",
+            36
+        ),
+        MenuCourse(
+            Category.MAIN_COURSES,
+            "Pizza",
+            "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta",
+            "https://www.bigbelly-cluj.ro/filehandler/ProductFirstFile/600x600/pizza-cu-ton-176.jpg?v=637043226689376134",
+            "360 g",
+            18
+        ),
+        MenuCourse(
+            Category.MAIN_COURSES,
+            "Ground beef",
+            "Ground beef, minced beef or beef mince is beef that has been finely chopped with a knife or a meat grinder or mincing machine. It is used in many recipes including hamburgers and spaghetti Bolognese.",
+            "https://cookthestory.com/wp-content/uploads/2019/02/how-to-cook-ground-beef-1392-320x180.jpg",
+            "300 g",
+            27
+        ),
+        MenuCourse(
+            Category.DESSERTS,
+            "Bagel",
+            "A dense bread roll in the shape of a ring, made by boiling dough and then baking it.",
+            "https://static1.squarespace.com/static/549367d9e4b0b0a3e2543543/t/5e2b22920d037176a3124973/1579885252035/NYC+Bagels.jpg?format=1500w",
+            "70g",
+            5
+        ),
+        MenuCourse(
+            Category.DESSERTS,
+            "Banana Bread",
+            "Moist and delicious banana bread recipe. Easy to make, no need for a mixer! Ripe bananas, butter, sugar, egg, vanilla, baking soda, and flour.",
+            "https://natashaskitchen.com/wp-content/uploads/2018/05/Banana-Bread-Recipe-7.jpg",
+            "100g",
+            15
+        ),
+        MenuCourse(
+            Category.DESSERTS,
+            "English Muffin",
+            "O brioșă engleză este o pâine mică, rotundă și plată cu drojdie, care este de obicei feliată orizontal, prăjită și untată. Muffins-ul englezesc prăjit, care este adesea folosit în Marea Britanie și Statele Unite ca mâncare pentru micul dejun, poate fi servit cu toppinguri dulci sau topping-uri savuroase.",
+            "https://www.biggerbolderbaking.com/wp-content/uploads/2019/03/No-knead-English-Muffins-Website-Thumbnail.jpg",
+            "130g",
+            15
+        ),
+        MenuCourse(
+            Category.DESSERTS,
+            "Croissant",
+            "Un croissant este o brutărie, făină, viennoiserie de patiserie de origine austriacă, numită pentru forma sa istorică de semilună. Croissants și alte viennoiserie sunt făcute dintr-un aluat stratificat cu drojdie de drojdie.",
+            "https://bakingamoment.com/wp-content/uploads/2019/02/IMG_2757-croissant-recipe-easy.jpg",
+            "40g",
+            5
+        ),
+        MenuCourse(
+            Category.DESSERTS,
+            "Bagheta",
+            "O baghetă este o pâine lungă și subțire de pâine franceză, care este obișnuit obținută din aluat slab de bază. Se distinge prin lungimea și crusta ei crocante.",
+            "https://www.exquis.ro/wp-content/uploads/2018/06/bagheta.png",
+            "120g",
+            12
+        ),
+        MenuCourse(
+            Category.DESSERTS,
+            "Orez cu lapte",
+            "Orezul cu lapte este un desert făcut din orez fiert în lapte. De obicei se condimentează cu zahăr și cu scorțișoară, nucșoară sau ghimbir. De multe ori se adaugă și stafide. Cel mai bun pregratar!!",
+            "https://retete.unica.ro/wp-content/uploads/2016/09/shutterstock_62962489-1024x739.jpg",
+            "150g",
+            11
         )
     )
 }

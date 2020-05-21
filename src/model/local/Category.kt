@@ -9,8 +9,8 @@ data class Category(
     companion object {
         val STARTERS = Category("Starters", 1)
         val MAIN_COURSES = Category("Main Courses", 2)
-        val BEVERAGES = Category("Beverages", 3)
-        val DESSERTS = Category("Desserts", 4)
+        val DESSERTS = Category("Desserts", 3)
+        val BEVERAGES = Category("Beverages", 4)
     }
 
     fun toCategoryResponse(): CategoryResponse {
