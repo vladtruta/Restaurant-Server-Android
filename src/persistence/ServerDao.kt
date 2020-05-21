@@ -14,4 +14,6 @@ interface ServerDao {
     fun insertCategory(category: Category)
     fun insertMenuCourse(menuCourse: MenuCourse)
     fun insertKitchenOrder(kitchenOrder: KitchenOrder)
+
+    fun deleteKitchenOrder(id: Int)
 }

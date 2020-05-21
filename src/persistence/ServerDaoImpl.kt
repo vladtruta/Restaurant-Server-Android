@@ -95,4 +95,9 @@ class ServerDaoImpl : ServerDao {
         }
         Unit
     }
+
+    override fun deleteKitchenOrder(id: Int) = transaction(db) {
+        KitchenOrderEntity.deleteWhere { KitchenOrderEntity.id eq id }
+        Unit
+    }
 }

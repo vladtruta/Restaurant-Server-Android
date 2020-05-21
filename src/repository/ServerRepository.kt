@@ -33,4 +33,8 @@ object ServerRepository {
         val kitchenOrder = kitchenRequest.toKitchenOrder() ?: throw Exception("Invalid kitchen order")
         dao.insertKitchenOrder(kitchenOrder)
     }
+
+    fun deleteOrder(id: Int) {
+        dao.deleteKitchenOrder(id)
+    }
 }

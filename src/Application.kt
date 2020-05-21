@@ -9,6 +9,7 @@ import io.ktor.features.ContentNegotiation
 import io.ktor.gson.gson
 import io.ktor.request.receive
 import io.ktor.response.respond
+import io.ktor.routing.delete
 import io.ktor.routing.get
 import io.ktor.routing.post
 import io.ktor.routing.routing
@@ -47,6 +48,20 @@ fun Application.module(testing: Boolean = false) {
                 ServerRepository.insertKitchenOrder(kitchenRequest)
                 call.respond(mapOf("success" to true))
             } catch (error: Exception) {
+                call.respond(mapOf("success" to false))
+            }
+        }
+
+        delete("/kitchen/{id}") {
+            val orderId = call.parameters["id"]?.toIntOrNull()
+            orderId?.let {
+                try {
+                    ServerRepository.deleteOrder(orderId)
+                    call.respond(mapOf("success" to true))
+                } catch (error: Exception) {
+                    call.respond(mapOf("success" to false))
+                }
+            } ?: run {
                 call.respond(mapOf("success" to false))
             }
         }
