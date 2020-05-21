@@ -14,6 +14,6 @@ data class KitchenRequest(
         cartItems ?: return null
         tableName ?: return null
 
-        return KitchenOrder(cartItems, tableName, 0)
+        return KitchenOrder(cartItems, tableName)
     }
 }

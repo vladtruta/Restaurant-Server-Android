@@ -6,6 +6,7 @@ import com.vladtruta.restaurantserver.model.local.MenuCourse
 
 interface ServerDao {
     fun reset()
+
     fun getAllCategories(): List<Category>
     fun getAllMenuCourses(): List<MenuCourse>
     fun getAllKitchenOrders(): List<KitchenOrder>
