@@ -9,9 +9,9 @@ import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class ServerDaoImpl : ServerDao {
-    private val db = Database.connect("localhost", "com.mysql.cj.jdbc.Driver", "root", "toor")
+    private val db = Database.connect("jdbc:mysql://localhost:3306/restaurant?serverTimezone=UTC", "com.mysql.cj.jdbc.Driver", "root", "12345678")
 
-    override fun reset() {
+    override fun reset() = transaction(db) {
         SchemaUtils.drop(CategoryEntity, MenuCourseEntity, KitchenOrderEntity)
         SchemaUtils.create(CategoryEntity, MenuCourseEntity, KitchenOrderEntity)
     }
@@ -66,6 +66,7 @@ class ServerDaoImpl : ServerDao {
     override fun insertCategory(category: Category) = transaction(db) {
         CategoryEntity.insert { insertStatement ->
             insertStatement[name] = category.name
+            insertStatement[id] = category.id
         }
         Unit
     }

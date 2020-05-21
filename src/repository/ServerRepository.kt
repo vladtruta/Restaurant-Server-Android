@@ -10,7 +10,7 @@ object ServerRepository {
 
     private val dao = ServerDaoImpl()
 
-    init {
+    fun init() {
         dao.reset()
 
         MockData.categories.forEach { dao.insertCategory(it) }

@@ -7,10 +7,10 @@ data class Category(
     val id: Int = 0
 ) {
     companion object {
-        val STARTERS = Category("Starters")
-        val MAIN_COURSES = Category("Main Courses")
-        val BEVERAGES = Category("Beverages")
-        val DESSERTS = Category("Desserts")
+        val STARTERS = Category("Starters", 1)
+        val MAIN_COURSES = Category("Main Courses", 2)
+        val BEVERAGES = Category("Beverages", 3)
+        val DESSERTS = Category("Desserts", 4)
     }
 
     fun toCategoryResponse(): CategoryResponse {
