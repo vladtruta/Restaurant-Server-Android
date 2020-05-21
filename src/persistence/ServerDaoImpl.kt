@@ -9,7 +9,12 @@ import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class ServerDaoImpl : ServerDao {
-    private val db = Database.connect("jdbc:mysql://localhost:3306/restaurant?serverTimezone=UTC", "com.mysql.cj.jdbc.Driver", "root", "12345678")
+    private val db = Database.connect(
+        "jdbc:mysql://localhost:3306/restaurant?serverTimezone=UTC",
+        "com.mysql.cj.jdbc.Driver",
+        "root",
+        "12345678"
+    )
 
     override fun reset() = transaction(db) {
         SchemaUtils.drop(CategoryEntity, MenuCourseEntity, KitchenOrderEntity)
@@ -50,10 +55,9 @@ class ServerDaoImpl : ServerDao {
 
     override fun getAllKitchenOrders(): List<KitchenOrder> = transaction(db) {
         KitchenOrderEntity.selectAll().map { resultRow ->
-            val cartItemsDeserialized = GsonHelper.instance.fromJson<List<CartItem>>(
-                resultRow[KitchenOrderEntity.cartItems],
-                CartItem::class.java
-            )
+            val cartItemsDeserialized =
+                GsonHelper.instance.fromJson(resultRow[KitchenOrderEntity.cartItems], Array<CartItem>::class.java)
+                    .toList()
 
             KitchenOrder(
                 cartItemsDeserialized,
